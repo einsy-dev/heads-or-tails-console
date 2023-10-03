@@ -4,8 +4,8 @@ const { DEFAULT_KEY } = require('./config');
 const { parsed: env } = require('dotenv').config();
 const { _ } = require('yargs').argv;
 
-const KEY = _[0] || DEFAULT_KEY;
-const CITY = _[1] || env.DEFAULT_CITY;
+const KEY = DEFAULT_KEY;
+const CITY = _[0] || env.DEFAULT_CITY;
 
 /* fetch('http://api.weatherstack.com/current' + '?access_key=' + KEY + '&query=' + CITY)
     .then(res => res.json())
